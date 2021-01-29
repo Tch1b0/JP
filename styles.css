@@ -1,0 +1,57 @@
+body{
+    font-family: sans-serif;
+}
+h1.content{
+    text-align: center;
+    font-size: 350%;
+}
+p.info{
+    margin-top: 4%;
+    text-align: center;
+    font-size: 200%;
+}
+a.list{
+    color: white;
+    text-decoration: none;
+    font-size: 300%;
+    transition: 0.5s;
+}
+a.link{
+    text-decoration: none;
+    font-size: 100%;
+    transition: 0.5s;
+}
+div.quickview{
+    text-align: center;
+}
+body{
+    background-color: rgb(53, 53, 53);
+}
+div.block{
+    width: 100%;
+    height: fit-content;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.white{
+    background-color: white;
+    color: rgb(53, 53, 53);
+}
+div.dark{
+    background-color:  rgb(53, 53, 53);
+    color: white;
+}
+a.button{
+    font-size: 250%;
+    border: 5px solid rgb(54, 54, 238);
+    background-color: rgb(54, 54, 238);
+    border-radius: 25px;
+    color: white;
+}
+a:hover{
+    font-size: 400%;
+    transition: 0.5s;
+}
