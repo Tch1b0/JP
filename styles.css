@@ -62,3 +62,14 @@ div.dark{
 img.project{
     border-radius: 25px;
 }
+@media(max-width: 500px) {
+    a.list {
+        font-size: 200%;
+    }
+    a.link:hover {
+        font-size: 90%;
+    }
+    a.button:hover {
+        font-size: 240%;
+    }
+}
