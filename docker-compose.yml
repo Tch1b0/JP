@@ -1,0 +1,9 @@
+version: "3.7"
+
+services: 
+    jp:
+        build: .
+        container_name: jp
+        restart: unless-stopped
+        ports: 
+            - "5003:5003"

@@ -1,0 +1,4 @@
+:5003 {
+    root * ./site
+    file_server
+}
