@@ -1,2 +1,2 @@
 # JP.de
-This is my new updated website! 
+This is my personal website.
