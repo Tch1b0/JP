@@ -6,4 +6,4 @@ services:
         container_name: jp
         restart: unless-stopped
         ports: 
-            - "5003:5003"
+            - "5006:5006"
