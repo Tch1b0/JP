@@ -2,7 +2,7 @@
 	<div>
 		<div class="box">
 			<div class="content">
-				<img :src="logo" alt="Logo" width="100px">
+				<img :src="logo" alt="Logo" width="100px" class="project-logo">
 				<h1>{{ title }}</h1>
 				<p>{{ description }}</p>
 				<button @click="changeLoc(title)">Read more</button>
@@ -32,7 +32,7 @@ export default {
 			window.location = "#/" + route;
 		},
 		getData() {
-			axios.get(`https://api.johannespour.de/post/index/${this.index}`)
+			axios.get(`https://api.johannespour.de/post/${this.index}`)
 			.then((response) => {
 				this.title = response.data["title"];
 				this.logo = `https://api.johannespour.de/post/${this.title}/logo`;
@@ -118,5 +118,8 @@ button {
 		cursor: pointer;
 		filter: blur(0px);
 	}
+}
+img.project-logo {
+	border: 2px solid rgb(27, 27, 27);
 }
 </style>

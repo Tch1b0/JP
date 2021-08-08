@@ -1,12 +1,12 @@
 <template>
     <div class="container">
-        <!-- <img :src="banner" alt="Banner" class="banner"> -->
+        <img :src="banner" alt="Banner" class="banner">
         <div class="box">
             <div class="about">
                 <img :src="logo" alt="Logo" width="150px">
                 <h1>{{ title }}</h1>
                 <hr>
-                <div v-html="longDescription"></div>
+                <div v-html="longDescription" class="content"></div>
             </div>
         </div>
     </div>
@@ -95,11 +95,23 @@ img.banner {
     filter: blur(5px);
     width: 77%;
     min-width: 0px;
+    max-width: 1300px;
     overflow-x: hidden;
+    overflow-y: hidden;
     border-radius: 25px;
+    border: 5px solid #ff6495;
 }
 hr {
     background-color: #ff6495;
     border: 0px;
+}
+div.content {
+    text-align: left;
+    a {
+        color: yellow;
+    }
+    img {
+        max-width: 500px;
+    }
 }
 </style>
