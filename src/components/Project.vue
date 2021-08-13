@@ -2,7 +2,12 @@
 	<div>
 		<div class="box">
 			<div class="content">
-				<img :src="logo" alt="Logo" width="100px" class="project-logo">
+				<img
+					:src="logo"
+					alt="Logo"
+					width="100px"
+					class="project-logo"
+				/>
 				<h1>{{ title }}</h1>
 				<p>{{ description }}</p>
 				<button @click="changeLoc(title)">Read more</button>
@@ -12,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
 	name: "project",
@@ -20,8 +25,8 @@ export default {
 		return {
 			logo: "",
 			title: "",
-			description: "",
-		}
+			description: ""
+		};
 	},
 	props: ["index"],
 	created() {
@@ -32,12 +37,13 @@ export default {
 			window.location = "#/" + route;
 		},
 		getData() {
-			axios.get(`https://api.johannespour.de/post/${this.index}`)
-			.then((response) => {
-				this.title = response.data["title"];
-				this.logo = `https://api.johannespour.de/post/${this.title}/logo`;
-				this.description = response.data["description"];
-			});
+			axios
+				.get(`https://api.johannespour.de/post/${this.index}`)
+				.then((response) => {
+					this.title = response.data["title"];
+					this.logo = `https://api.johannespour.de/post/${this.title}/logo`;
+					this.description = response.data["description"];
+				});
 		}
 	}
 };
@@ -52,12 +58,10 @@ $contentcrunch: 5%;
 $outlinesize: 1.5px;
 
 h1 {
-    text-align: center;
-    text-shadow:
-    -$outlinesize -$outlinesize 0 #000,
-    $outlinesize -$outlinesize 0 #000,
-    -$outlinesize $outlinesize 0 #000,
-    $outlinesize $outlinesize 0 #000;  
+	text-align: center;
+	text-shadow: -$outlinesize -$outlinesize 0 #000,
+		$outlinesize -$outlinesize 0 #000, -$outlinesize $outlinesize 0 #000,
+		$outlinesize $outlinesize 0 #000;
 }
 
 .box {

@@ -1,14 +1,14 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import App from './App.vue';
-import Home from './components/Home.vue';
-import AboutProject from './components/AboutProject.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import App from "./App.vue";
+import Home from "./components/Home.vue";
+import AboutProject from "./components/AboutProject.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
-	{path: "/", component: Home},
-	{path: "/:name", component: AboutProject}
+	{ path: "/", component: Home },
+	{ path: "/:name", component: AboutProject }
 ];
 
 const router = new VueRouter({
@@ -16,7 +16,7 @@ const router = new VueRouter({
 });
 
 new Vue({
-	el: '#app',
+	el: "#app",
 	router,
-	render: h => h(App)
+	render: (h) => h(App)
 });
