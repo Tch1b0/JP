@@ -1,31 +1,28 @@
 <template>
 	<div class="container">
-		<img :src="banner" alt="Banner" class="banner" />
+		<img :src="post.banner_url" alt="Banner" class="banner" />
 		<div class="box">
 			<div class="about">
-				<img :src="logo" alt="Logo" width="150px" />
-				<h1>{{ title }}</h1>
+				<img :src="post.logo_url" alt="Logo" width="150px" />
+				<h1>{{ post.title }}</h1>
 				<hr />
-				<div v-html="longDescription" class="content"></div>
+				<div v-html="post.long_description" class="content"></div>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import axios from "axios";
-import showdown from "showdown";
+import { Post, PostCollection, Requester } from "jp-wrapper";
 
-var converter = new showdown.Converter();
+let requester = new Requester();
+
+var postcollection = new PostCollection(requester);
 
 export default {
 	data() {
 		return {
-			title: "",
-			logo: "",
-			banner: "",
-			description: "",
-			longDescription: ""
+			post: Post
 		};
 	},
 	created() {
@@ -33,28 +30,11 @@ export default {
 	},
 	methods: {
 		getData() {
-			axios
-				.get(
-					`https://api.johannespour.de/post/${this.$route.params["name"]}`
-				)
-				.then((response) => {
-					this.title = response.data["title"];
-					if (this.title === undefined) {
-						window.location = "/";
-					}
-					this.description = response.data["description"];
-					this.logo = `https://api.johannespour.de/post/${this.title}/logo`;
-					this.banner = `https://api.johannespour.de/post/${this.title}/banner`;
-					this.longDescription = this.markdownToHtml(
-						response.data["long-description"]
-					);
-				})
-				.catch(() => {
-					window.location = "/";
-				});
-		},
-		markdownToHtml(markdown) {
-			return converter.makeHtml(markdown);
+			let title = this.$route.params["name"];
+			postcollection.by_title(title).then((data) => {
+				this.post = data;
+				this.post.description_to_html();
+			});
 		}
 	}
 };

@@ -12,7 +12,11 @@
 
 <script>
 import Project from "./Project.vue";
-import axios from "../../node_modules/axios/index";
+import { Requester, PostCollection } from "jp-wrapper";
+
+let requester = new Requester();
+
+var postcollection = new PostCollection(requester);
 
 export default {
 	name: "home",
@@ -26,11 +30,9 @@ export default {
 	},
 	methods: {
 		getPosts() {
-			axios
-				.get("https://api.johannespour.de/posts/titles")
-				.then((response) => {
-					this.posts = response.data;
-				});
+			postcollection.all_titles().then((data) => {
+				this.posts = data;
+			});
 		}
 	},
 	components: {
