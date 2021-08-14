@@ -3,29 +3,31 @@
 		<div class="box">
 			<div class="content">
 				<img
-					:src="logo"
+					:src="post.logo_url"
 					alt="Logo"
 					width="100px"
 					class="project-logo"
 				/>
-				<h1>{{ title }}</h1>
-				<p>{{ description }}</p>
-				<button @click="changeLoc(title)">Read more</button>
+				<h1>{{ post.title }}</h1>
+				<p>{{ post.description }}</p>
+				<button @click="changeLoc(post.title)">Read more</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import axios from "axios";
+import { Post, PostCollection, Requester } from "jp-wrapper";
+
+let requester = new Requester();
+
+var postcollection = new PostCollection(requester);
 
 export default {
 	name: "project",
 	data() {
 		return {
-			logo: "",
-			title: "",
-			description: ""
+			post: Post
 		};
 	},
 	props: ["index"],
@@ -37,13 +39,10 @@ export default {
 			window.location = "#/" + route;
 		},
 		getData() {
-			axios
-				.get(`https://api.johannespour.de/post/${this.index}`)
-				.then((response) => {
-					this.title = response.data["title"];
-					this.logo = `https://api.johannespour.de/post/${this.title}/logo`;
-					this.description = response.data["description"];
-				});
+			postcollection.by_title(this.index).then((data) => {
+				this.post = data;
+				console.log(data);
+			});
 		}
 	}
 };
