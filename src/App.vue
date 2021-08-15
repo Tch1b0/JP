@@ -46,7 +46,7 @@ a {
 	overflow-y: hidden;
 }
 img {
-	max-width: 350px;
+	max-width: 300px;
 }
 img.project-logo {
 	min-width: 150px;
