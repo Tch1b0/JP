@@ -47,6 +47,8 @@ a {
 }
 img {
 	max-width: 300px;
+	border-radius: 5px;
+	border: 1px solid $boxbordercolor;
 }
 img.project-logo {
 	min-width: 150px;
