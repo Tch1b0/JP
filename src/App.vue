@@ -94,6 +94,21 @@ hr {
 	padding-bottom: $contentcrunch;
 	padding-right: $contentcrunch;
 	padding-left: $contentcrunch;
+
+	hr {
+		height: 1px;
+	}
+	p {
+		margin-bottom: 2%;
+	}
+	img {
+		margin-bottom: 3%;
+	}
+	h1,
+	h2,
+	h3 {
+		bottom: 0;
+	}
 }
 
 @keyframes fadein {
