@@ -27,7 +27,6 @@ $boxcolor: rgb(36, 36, 36);
 $boxbordercolor: rgba(32, 32, 32, 0.842);
 $roundness: 25px;
 $contentcrunch: 5%;
-$boxtopmargin: 20px;
 
 body {
 	color: $textcolor;
@@ -80,7 +79,7 @@ hr {
 	animation-fill-mode: forwards;
 }
 .box {
-	margin-top: $boxtopmargin;
+	margin-top: 20px;
 	min-width: 350px;
 	min-height: 350px;
 	background-color: $boxcolor;
@@ -159,11 +158,11 @@ hr {
 @keyframes slidein {
 	from {
 		margin-top: 25%;
-		opacity: 0%;
+		opacity: 0;
 	}
 	to {
-		margin-top: $boxtopmargin;
-		opacity: 100%;
+		margin-top: 20px;
+		opacity: 1;
 	}
 }
 </style>

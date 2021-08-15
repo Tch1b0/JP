@@ -68,11 +68,11 @@ li {
 @keyframes aboutmeslidein {
 	from {
 		margin-right: 15%;
-		opacity: 0%;
+		opacity: 0;
 	}
 	to {
 		margin-right: 0%;
-		opacity: 100%;
+		opacity: 1;
 	}
 }
 
