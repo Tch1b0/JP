@@ -3,7 +3,7 @@
 		<div class="logo">
 			<div class="logo-circle">
 				<a href="#/" class="main-logo"
-					><img src="./assets/JP.gif" alt="JP"
+					><img src="./assets/JP.gif" alt="JP" class="main-logo"
 				/></a>
 			</div>
 		</div>
@@ -57,6 +57,7 @@ img.project-logo {
 }
 img.main-logo {
 	width: 75px;
+	border: 0px solid black;
 }
 .logo-circle {
 	background-color: #ff6495;
