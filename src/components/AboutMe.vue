@@ -22,6 +22,7 @@ I am **Johannes Pour**(_alias **Tch1b0**_) and <br>I am a _${age}-year-old_ **de
 * **[itch.io](https://tch1b0.itch.io)**
 * **[pypi](https://pypi.org/user/Tch1b0/)**
 * **[npm](https://www.npmjs.com/~tch1b0)**
+* **[Contact me](&#109;&#97;&#105;&#108;&#116;&#111;&#58;%4A%6F%68%61%6E%6E%65%73%40%62%65%6E%31%31%2E%64%65)**
 `;
 
 export default {
