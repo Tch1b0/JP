@@ -27,6 +27,7 @@ $boxcolor: rgb(36, 36, 36);
 $boxbordercolor: rgba(32, 32, 32, 0.842);
 $roundness: 25px;
 $contentcrunch: 5%;
+$boxtopmargin: 20px;
 
 body {
 	color: $textcolor;
@@ -79,7 +80,7 @@ hr {
 	animation-fill-mode: forwards;
 }
 .box {
-	margin-top: 20px;
+	margin-top: $boxtopmargin;
 	min-width: 350px;
 	min-height: 350px;
 	background-color: $boxcolor;
@@ -87,10 +88,9 @@ hr {
 	border: 1px solid $boxbordercolor;
 	justify-content: center;
 	text-align: center;
+	animation: slidein 2s ease;
 	color: snow;
 	font-family: sans-serif;
-	animation: slidein 1s ease;
-	animation-fill-mode: forwards;
 	box-shadow: -5px 2px 1px 0px rgb(27, 27, 27);
 }
 .content {
@@ -151,6 +151,17 @@ hr {
 		padding-bottom: 0.8%;
 		margin-bottom: 1%;
 		box-shadow: -5px 2px 1px 0px #ce3f6c;
+	}
+}
+
+@keyframes slidein {
+	from {
+		margin-top: 25%;
+		opacity: 0%;
+	}
+	to {
+		margin-top: $boxtopmargin;
+		opacity: 100%;
 	}
 }
 </style>

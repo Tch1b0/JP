@@ -52,6 +52,7 @@ export default {
 	position: fixed;
 	display: flex;
 	justify-content: left;
+	animation: aboutmeslidein 2.5s ease;
 }
 .project-container {
 	display: flex;
@@ -63,6 +64,18 @@ export default {
 li {
 	list-style-type: none;
 }
+
+@keyframes aboutmeslidein {
+	from {
+		margin-right: 15%;
+		opacity: 0%;
+	}
+	to {
+		margin-right: 0%;
+		opacity: 100%;
+	}
+}
+
 @media (min-width: 1250px) and (max-width: 1600px) {
 	.about-container {
 		left: 1%;
@@ -72,8 +85,6 @@ li {
 @media (max-width: 1250px) {
 	.about-container {
 		left: 0;
-		position: relative;
-		justify-content: center;
 	}
 }
 </style>

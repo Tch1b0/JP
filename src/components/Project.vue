@@ -60,16 +60,6 @@ p {
 	user-select: none;
 	filter: blur(2px);
 }
-@keyframes slidein {
-	from {
-		margin-bottom: 20%;
-		opacity: 0%;
-	}
-	to {
-		margin-bottom: 0%;
-		opacity: 100%;
-	}
-}
 button {
 	background-color: #78fff1;
 	border-color: rgba(0, 255, 255, 0);
