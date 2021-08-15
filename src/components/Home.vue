@@ -1,6 +1,9 @@
 <template>
 	<div>
-		<div class="container">
+		<div class="about-container">
+			<about-me />
+		</div>
+		<div class="project-container">
 			<div class="projects">
 				<li v-for="post in posts" :key="post">
 					<project :index="post"></project>
@@ -13,6 +16,7 @@
 <script>
 import Project from "./Project.vue";
 import { Requester, PostCollection } from "jp-wrapper";
+import AboutMe from "./AboutMe.vue";
 
 let requester = new Requester();
 
@@ -36,13 +40,20 @@ export default {
 		}
 	},
 	components: {
-		project: Project
+		project: Project,
+		AboutMe
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.container {
+.about-container {
+	left: 5%;
+	position: fixed;
+	display: flex;
+	justify-content: left;
+}
+.project-container {
 	display: flex;
 	justify-content: center;
 }
@@ -51,5 +62,18 @@ export default {
 }
 li {
 	list-style-type: none;
+}
+@media (min-width: 1250px) and (max-width: 1600px) {
+	.about-container {
+		left: 1%;
+	}
+}
+
+@media (max-width: 1250px) {
+	.about-container {
+		left: 0;
+		position: relative;
+		justify-content: center;
+	}
 }
 </style>

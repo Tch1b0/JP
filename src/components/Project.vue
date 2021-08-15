@@ -2,12 +2,7 @@
 	<div>
 		<div class="box">
 			<div class="content">
-				<img
-					:src="post.logo_url"
-					alt="Logo"
-					width="100px"
-					class="project-logo"
-				/>
+				<img :src="post.logo_url" alt="Logo" class="project-logo" />
 				<h1>{{ post.title }}</h1>
 				<p>{{ post.description }}</p>
 				<button @click="changeLoc(post.title)">Read more</button>
@@ -49,11 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$boxcolor: rgb(36, 36, 36);
-$boxbordercolor: rgba(32, 32, 32, 0.842);
-$roundness: 25px;
-$contentcrunch: 5%;
-
 $outlinesize: 1.5px;
 
 h1 {
@@ -63,37 +53,8 @@ h1 {
 		$outlinesize $outlinesize 0 #000;
 }
 
-.box {
-	margin-top: 20px;
-	min-width: 350px;
-	min-height: 350px;
-	max-width: 500px;
-	max-height: 500px;
-	background-color: $boxcolor;
-	border-radius: $roundness;
-	border: 1px solid $boxbordercolor;
-	justify-content: center;
-	text-align: center;
-	color: snow;
-	font-family: sans-serif;
-	animation: slidein 1s ease;
-	animation-fill-mode: forwards;
-	box-shadow: -5px 2px 1px 0px rgb(27, 27, 27);
-}
-
-.content {
-	padding-top: $contentcrunch;
-	padding-bottom: $contentcrunch;
-	padding-right: $contentcrunch;
-	padding-left: $contentcrunch;
-}
 p {
 	overflow-wrap: break-word;
-}
-img {
-	min-width: 150px;
-	max-width: 300px;
-	border-radius: 5px;
 }
 .blurred-description {
 	user-select: none;

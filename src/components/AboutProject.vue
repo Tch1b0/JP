@@ -93,6 +93,7 @@ div.content {
 	text-align: left;
 	a {
 		color: yellow;
+		text-decoration: none;
 	}
 	img {
 		max-width: 500px;

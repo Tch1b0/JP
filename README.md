@@ -1,18 +1,5 @@
-# jp
+# JP
 
-> My personal website
+## Purpose
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+**JP** is the name of **my personal website** on which I am able to upload posts via http-requests.
