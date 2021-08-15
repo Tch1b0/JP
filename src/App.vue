@@ -2,9 +2,9 @@
 	<div id="app">
 		<div class="logo">
 			<div class="logo-circle">
-				<a href="#/" class="main-logo"
-					><img src="./assets/JP.gif" alt="JP" class="main-logo"
-				/></a>
+				<a href="#/" class="main-logo">
+					<img src="./assets/JP.gif" alt="JP" class="main-logo" />
+				</a>
 			</div>
 		</div>
 		<hr />
@@ -60,6 +60,7 @@ img.main-logo {
 	border: 0px solid black;
 }
 .logo-circle {
+	margin: 0px 0px 0px 0px;
 	background-color: #ff6495;
 	border-radius: 100%;
 	padding-left: 1.1%;
@@ -120,6 +121,36 @@ hr {
 	}
 	to {
 		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	img.main-logo {
+		width: 65px;
+		margin-left: 15%;
+		margin-top: 17%;
+	}
+	.logo-circle {
+		width: 90px;
+		height: 90px;
+	}
+}
+@media (min-width: 500px) {
+	img.main-logo {
+		width: 75px;
+		border: 0px solid black;
+	}
+
+	.logo-circle {
+		margin: 0px 0px 0px 0px;
+		background-color: #ff6495;
+		border-radius: 100%;
+		padding-left: 1.1%;
+		padding-top: 1.1%;
+		padding-right: 1.2%;
+		padding-bottom: 0.8%;
+		margin-bottom: 1%;
+		box-shadow: -5px 2px 1px 0px #ce3f6c;
 	}
 }
 </style>
