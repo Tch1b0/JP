@@ -1,0 +1,107 @@
+<template>
+	<div id="app">
+		<div class="logo">
+			<div class="logo-circle">
+				<a href="#/" class="main-logo"
+					><img src="./assets/JP.gif" alt="JP"
+				/></a>
+			</div>
+		</div>
+		<hr />
+		<router-view></router-view>
+	</div>
+</template>
+
+<script>
+export default {
+	name: "app"
+};
+</script>
+
+<style lang="scss">
+$primcolor: #361999;
+$seccolor: #78fff1;
+$textcolor: snow;
+
+$boxcolor: rgb(36, 36, 36);
+$boxbordercolor: rgba(32, 32, 32, 0.842);
+$roundness: 25px;
+$contentcrunch: 5%;
+
+body {
+	color: $textcolor;
+	font-family: sans-serif;
+	background-color: $primcolor;
+}
+
+a {
+	font-size: 125%;
+	color: yellow;
+	text-decoration: none;
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	overflow-y: hidden;
+}
+img {
+	max-width: 350px;
+}
+img.project-logo {
+	min-width: 150px;
+	max-width: 300px;
+	border-radius: 5px;
+}
+img.main-logo {
+	width: 75px;
+}
+.logo-circle {
+	background-color: #ff6495;
+	border-radius: 100%;
+	padding-left: 1.1%;
+	padding-top: 1.1%;
+	padding-right: 1.2%;
+	padding-bottom: 0.8%;
+	margin-bottom: 1%;
+	box-shadow: -5px 2px 1px 0px #ce3f6c;
+}
+hr {
+	background-color: $seccolor;
+	border: 1px solid $seccolor;
+	height: 5px;
+	filter: blur(2px);
+	animation: fadein 1s ease;
+	animation-fill-mode: forwards;
+}
+.box {
+	margin-top: 20px;
+	min-width: 350px;
+	min-height: 350px;
+	background-color: $boxcolor;
+	border-radius: $roundness;
+	border: 1px solid $boxbordercolor;
+	justify-content: center;
+	text-align: center;
+	color: snow;
+	font-family: sans-serif;
+	animation: slidein 1s ease;
+	animation-fill-mode: forwards;
+	box-shadow: -5px 2px 1px 0px rgb(27, 27, 27);
+}
+.content {
+	padding-top: $contentcrunch;
+	padding-bottom: $contentcrunch;
+	padding-right: $contentcrunch;
+	padding-left: $contentcrunch;
+}
+
+@keyframes fadein {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+</style>
