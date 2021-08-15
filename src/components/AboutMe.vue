@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="box">
+		<div class="box useinslide">
 			<img src="./../assets/Tch1b0.gif" class="project-logo" />
 			<div class="content">
 				<p v-html="text"></p>

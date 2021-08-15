@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="box">
+		<div class="box useinslide">
 			<div class="content">
 				<img :src="post.logo_url" alt="Logo" class="project-logo" />
 				<h1>{{ post.title }}</h1>

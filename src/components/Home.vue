@@ -85,6 +85,8 @@ li {
 @media (max-width: 1250px) {
 	.about-container {
 		left: 0;
+		position: relative;
+		justify-content: center;
 	}
 }
 </style>

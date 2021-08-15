@@ -88,10 +88,12 @@ hr {
 	border: 1px solid $boxbordercolor;
 	justify-content: center;
 	text-align: center;
-	animation: slidein 2s ease;
 	color: snow;
 	font-family: sans-serif;
 	box-shadow: -5px 2px 1px 0px rgb(27, 27, 27);
+}
+.useinslide {
+	animation: slidein 2s ease;
 }
 .content {
 	padding-top: $contentcrunch;
