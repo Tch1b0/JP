@@ -66,7 +66,8 @@ button {
 	font-size: 150%;
 	color: rgb(36, 36, 36);
 	border-radius: 13px;
-	filter: blur(1px);
+	width: 100%;
+	margin-top: 30px;
 
 	&:hover {
 		cursor: pointer;
